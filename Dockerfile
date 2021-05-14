@@ -9,4 +9,4 @@ RUN git clone https://github.com/canonical/sec-cvescan
 RUN pip3 install --user sec-cvescan/
 RUN cp /usr/lib/python3/dist-packages/apt_pkg.cpython-34m-x86_64-linux-gnu.so /root/.local/lib/python3.6/site-packages/apt_pkg.cpython-36m-x86_64-linux-gnu.so
 RUN pyinstaller /root/.local/bin/cvescan --add-data "/root/.local/lib/python3.6/site-packages/yaspin/data/spinners.json:yaspin/data/" --onefile
-ENTRYPOINT sleep 300
+ENTRYPOINT sleep 900
