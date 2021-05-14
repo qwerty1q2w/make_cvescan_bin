@@ -1,4 +1,3 @@
-# make_cvescan_bin
 docker build --tag name:test - < Dockerfile
 docker run -d id
 CONTAINER_ID=$(docker ps -alq)
