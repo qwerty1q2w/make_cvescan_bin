@@ -2,8 +2,7 @@ FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install software-properties-common git wget python3-apt -y
 RUN add-apt-repository ppa:deadsnakes/ppa -y
-RUN apt-get update
-RUN apt-get install python3.6 python3.6-dev -y
+RUN apt-get update && apt-get install python3.6 python3.6-dev -y
 RUN wget https://bootstrap.pypa.io/get-pip.py && python3.6 get-pip.py
 RUN pip3.6 install pyinstaller
 RUN git clone https://github.com/canonical/sec-cvescan
