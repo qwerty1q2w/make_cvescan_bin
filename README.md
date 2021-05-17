@@ -1,4 +1,4 @@
-Docker container for making cvescan binary from https://github.com/canonical/sec-cvescan No spapd, no dependencies, only one binary file.
+Docker container for making cvescan binary from https://github.com/canonical/sec-cvescan No spapd, no dependencies, only one binary file. And for making debian package with cvescan + my scripts for enriching cvescan report + cron.d task and logrotate.d task
 ---
 1) git clone https://github.com/qwerty1q2w/make_cvescan_bin
 2) docker build --tag name:cvescan - < make_cvescan_bin/Dockerfile
@@ -9,3 +9,4 @@ Docker container for making cvescan binary from https://github.com/canonical/sec
 8) docker cp $CONTAINER_ID:ext-cvescan.deb /tmp    ### deb_package with cvescan and script https://github.com/qwerty1q2w/cvescan_handler/blob/master/cvescan_handler and task in cron.d and logrotate.d
 
 or use https://github.com/qwerty1q2w/make_cvescan_bin/releases/
+
